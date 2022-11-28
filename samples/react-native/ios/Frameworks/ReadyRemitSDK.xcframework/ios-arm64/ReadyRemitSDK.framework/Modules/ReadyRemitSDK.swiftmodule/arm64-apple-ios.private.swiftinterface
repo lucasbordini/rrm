@@ -1,0 +1,265 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ReadyRemitSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AcuantCamera
+import AcuantCommon
+import AcuantFaceCapture
+import AcuantImagePreparation
+import AcuantPassiveLiveness
+import Combine
+import Foundation
+import Network
+@_exported import ReadyRemitSDK
+import ScanForensicsPlus
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@objc public enum ReadyRemitApiEnvironment : Swift.Int {
+  case production, sandbox, uat
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ReadyRemit : ObjectiveC.NSObject {
+  @objc public static let shared: ReadyRemitSDK.ReadyRemit
+  @objc public var environment: ReadyRemitSDK.ReadyRemitApiEnvironment {
+    @objc get
+    @objc set
+  }
+  @objc public var appearance: ReadyRemitSDK.ReadyRemitAppearance
+  public var closeSDKButtonText: Swift.String?
+  @objc public var info: Swift.String {
+    @objc get
+  }
+  public func launch(inNavigation: UIKit.UINavigationController, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  public func launchEntrySwiftUi(authToken: Swift.String, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?) -> SwiftUI.AnyView
+  @objc public func languageSelected(_ lang: Swift.String)
+  @objc public func switchFeatureFlags(_ flag: Swift.String, _ status: Swift.Bool = false)
+  @objc public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Foundation.Date {
+  public static func getFormattedDate(string: Swift.String, formatter: Swift.String, currentFormat: Swift.String) -> Swift.String
+}
+@objc public class ReadyRemitObjcOAuthToken : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public init(tokenType: Swift.String, accessToken: Swift.String, expiresInSeconds: Swift.Int)
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class ReadyRemitFonts : ObjectiveC.NSObject {
+  public var title3: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var title3Emphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var headline: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var headlineEmphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var body: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var bodyEmphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var callout: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var calloutEmphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var subheadline: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var subheadlineEmphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var footnote: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var footnoteEmphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var caption: ReadyRemitSDK.ReadyRemit.FontSpec?
+  public var captionEmphasis: ReadyRemitSDK.ReadyRemit.FontSpec?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String)
+  convenience public init(lightHex: Swift.String, darkHex: Swift.String)
+}
+@_Concurrency.MainActor(unsafe) public struct RecipientsListView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s13ReadyRemitSDK18RecipientsListViewV4bodyQrvp", 0) __
+}
+@_inheritsConvenienceInitializers @objc public class ReadyRemitColorScheme : ObjectiveC.NSObject {
+  @objc public var primaryShade1: UIKit.UIColor
+  @objc public var primaryShade2: UIKit.UIColor
+  @objc public var secondaryShade1: UIKit.UIColor
+  @objc public var secondaryShade2: UIKit.UIColor
+  @objc public var secondaryShade3: UIKit.UIColor
+  @objc public var textPrimaryShade1: UIKit.UIColor
+  @objc public var textPrimaryShade2: UIKit.UIColor
+  @objc public var textPrimaryShade3: UIKit.UIColor
+  @objc public var textPrimaryShade4: UIKit.UIColor
+  @objc public var textPrimaryShade5: UIKit.UIColor
+  @objc public var backgroundColorPrimary: UIKit.UIColor
+  @objc public var backgroundColorSecondary: UIKit.UIColor
+  @objc public var backgroundColorTertiary: UIKit.UIColor
+  @objc public var error: UIKit.UIColor
+  @objc public var success: UIKit.UIColor
+  public var errorBackground: (light: UIKit.UIColor, dark: UIKit.UIColor)
+  @objc public var controlShade1: UIKit.UIColor
+  @objc public var controlShade2: UIKit.UIColor
+  @objc public var controlAccessoryShade1: UIKit.UIColor
+  @objc public var controlAccessoryShade2: UIKit.UIColor
+  @objc public var textPrimaryDisabled: UIKit.UIColor
+  @objc public var textTertiaryDisabled: UIKit.UIColor
+  @objc public var textQuaternaryDisabled: UIKit.UIColor
+  public var inputUnderLineActive: (light: UIKit.UIColor, dark: UIKit.UIColor)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol ReadyRemitDelegate {
+  @objc func onAuthTokenRequest(success: @escaping (Swift.String) -> Swift.Void, failure: @escaping () -> Swift.Void)
+  @objc func onSubmitTransfer(transferRequest: ReadyRemitSDK.ReadyRemit.TransferRequest, success: @escaping (Swift.String) -> Swift.Void, failure: @escaping (Swift.String, Swift.String) -> Swift.Void)
+  @objc optional func onSDKClose()
+}
+extension ReadyRemitSDK.ReadyRemit {
+  @objc public class TransferRequest : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let dstCountryIso3Code: Swift.String
+    @objc final public let dstCurrencyIso3Code: Swift.String
+    @objc final public let srcCurrencyIso3Code: Swift.String
+    @objc final public let transferMethod: Swift.String
+    @objc final public let quoteBy: Swift.String
+    @objc final public let amount: Swift.Int
+    @objc final public let fee: Swift.Int
+    @objc final public let recipientId: Swift.String
+    @objc final public let recipientAccountId: Swift.String?
+    @objc final public let purposeOfRemittance: Swift.String
+    @objc final public let fields: [ReadyRemitSDK.ReadyRemit.RequestField]?
+    @objc final public let quoteHistoryId: Swift.String?
+    @objc public init(dstCountryIso3Code: Swift.String, dstCurrencyIso3Code: Swift.String, srcCurrencyIso3Code: Swift.String, transferMethod: Swift.String, quoteBy: Swift.String, amount: Swift.Int, fee: Swift.Int, recipientId: Swift.String, recipientAccountId: Swift.String?, purposeOfRemittance: Swift.String, fields: [ReadyRemitSDK.ReadyRemit.RequestField]?, quoteHistoryId: Swift.String)
+    @objc public func toJSON() -> Swift.String?
+    @objc deinit
+    public func encode(to encoder: Swift.Encoder) throws
+    required public init(from decoder: Swift.Decoder) throws
+  }
+  @objc public class RequestField : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let id: Swift.String
+    @objc final public let name: Swift.String
+    @objc final public let type: Swift.String
+    @objc final public let value: Swift.String
+    @objc final public let displayText: Swift.String
+    @objc public init(id: Swift.String, name: Swift.String, type: Swift.String, value: Swift.String, displayText: Swift.String)
+    @objc deinit
+    public func encode(to encoder: Swift.Encoder) throws
+    required public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension ReadyRemitSDK.ReadyRemit {
+  @objc public class FontSpec : ObjectiveC.NSObject {
+    @objc public static var defaultFamily: Swift.String?
+    @objc public static var dynamicFontsize: Swift.Bool
+    public init(family: Swift.String? = nil, size: CoreFoundation.CGFloat? = nil, weight: UIKit.UIFont.Weight? = nil, italic: Swift.Bool = false)
+    @objc deinit
+  }
+  public class CallForActionButtonStyle {
+    public var titleFont: ReadyRemitSDK.ReadyRemit.FontSpec?
+    public var titleFontColor: UIKit.UIColor?
+    public var titleFontColorPressed: UIKit.UIColor?
+    public var titleFontColorDisabled: UIKit.UIColor?
+    public var backgroundColor: UIKit.UIColor?
+    public var backgroundColorPressed: UIKit.UIColor?
+    public var backgroundColorDisabled: UIKit.UIColor?
+    public var borderColor: UIKit.UIColor?
+    public var borderColorPressed: UIKit.UIColor?
+    public var borderColorDisabled: UIKit.UIColor?
+    public var borderWidth: CoreFoundation.CGFloat?
+    public var borderCornerRadius: CoreFoundation.CGFloat?
+    public init(titleFont: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, titleFontColor: UIKit.UIColor? = nil, titleFontColorPressed: UIKit.UIColor? = nil, titleFontColorDisabled: UIKit.UIColor? = nil, backgroundColor: UIKit.UIColor? = nil, backgroundColorPressed: UIKit.UIColor? = nil, backgroundColorDisabled: UIKit.UIColor? = nil, borderColor: UIKit.UIColor? = nil, borderColorPressed: UIKit.UIColor? = nil, borderColorDisabled: UIKit.UIColor? = nil, borderWidth: CoreFoundation.CGFloat? = nil, borderCornerRadius: CoreFoundation.CGFloat? = nil)
+    @objc deinit
+  }
+  public class BorderlessButtonStyle {
+    public init(titleFont: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, titleFontColor: UIKit.UIColor? = nil, titleFontColorPressed: UIKit.UIColor? = nil, titleFontColorDisabled: UIKit.UIColor? = nil)
+    @objc deinit
+  }
+  public class InputStyle {
+    public init(inputFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, inputFontColor: UIKit.UIColor? = nil, inputFontColorDisabled: UIKit.UIColor? = nil, dateLabelFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, dateLabelColor: UIKit.UIColor? = nil, placeholderFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, placeholderFontColor: UIKit.UIColor? = nil, placeholderFontColorDisabled: UIKit.UIColor? = nil, requiredIndicatorColor: UIKit.UIColor? = nil, labelFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, labelFontColor: UIKit.UIColor? = nil, labelFontColorActive: UIKit.UIColor? = nil, labelFontColorDisabled: UIKit.UIColor? = nil, infoFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, infoFontColor: UIKit.UIColor? = nil, infoFontColorActive: UIKit.UIColor? = nil, infoFontColorDisabled: UIKit.UIColor? = nil, infoIcon: UIKit.UIImage? = nil, buttonDeleteColor: UIKit.UIColor? = nil, buttonDropdownIcon: UIKit.UIImage? = nil, buttonDropdownColor: UIKit.UIColor? = nil, buttonDropdownColorDisabled: UIKit.UIColor? = nil, borderColorNormal: UIKit.UIColor? = nil, borderColorActive: UIKit.UIColor? = nil, borderColorDisabled: UIKit.UIColor? = nil, borderColorSuccess: UIKit.UIColor? = nil, borderColorError: UIKit.UIColor? = nil, borderWidth: CoreFoundation.CGFloat? = nil, borderWidthActivated: CoreFoundation.CGFloat? = nil, validationFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, validationErrorIcon: UIKit.UIImage? = nil, validationSuccessIcon: UIKit.UIImage? = nil, hyperlinkColor: UIKit.UIColor? = nil)
+    @objc deinit
+  }
+  public class InputSelectionListStyle {
+    public init(backButtonColor: UIKit.UIColor? = nil, titleFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, titleFontColor: UIKit.UIColor? = nil, itemFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, itemFontColor: UIKit.UIColor? = nil, backgroundColor: UIKit.UIColor? = nil)
+    @objc deinit
+  }
+  public class SearchbarStyle {
+    public init(searchFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, searchFontColor: UIKit.UIColor? = nil, placeholderFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, backgroundColor: UIKit.UIColor? = nil, searchIcon: UIKit.UIImage? = nil, searchIconColor: UIKit.UIColor? = nil, clearButtonColor: UIKit.UIColor? = nil, cancelButtonFontSpec: ReadyRemitSDK.ReadyRemit.FontSpec? = nil, cancelButtonFontColor: UIKit.UIColor? = nil)
+    @objc deinit
+  }
+}
+public protocol XIBLoadable {
+  func load(from xibName: Swift.String) -> Swift.Bool
+  func add(to view: UIKit.UIView)
+}
+extension ReadyRemitSDK.XIBLoadable where Self : UIKit.UIView {
+  @discardableResult
+  public func load(from xibName: Swift.String) -> Swift.Bool
+  public func add(to view: UIKit.UIView)
+}
+@_inheritsConvenienceInitializers @objc public class ReadyRemitAppearance : ObjectiveC.NSObject {
+  @objc public static let shared: ReadyRemitSDK.ReadyRemitAppearance
+  @objc public var colors: ReadyRemitSDK.ReadyRemitColorScheme
+  @objc public var fonts: ReadyRemitSDK.ReadyRemitFonts
+  @objc public init(fonts: ReadyRemitSDK.ReadyRemitFonts, colors: ReadyRemitSDK.ReadyRemitColorScheme)
+  @objc public init(fonts: ReadyRemitSDK.ReadyRemitFonts)
+  @objc public init(colors: ReadyRemitSDK.ReadyRemitColorScheme)
+  @objc override dynamic public init()
+  public var primaryButtonStyle: ReadyRemitSDK.ReadyRemit.CallForActionButtonStyle
+  public var secondaryButtonStyle: ReadyRemitSDK.ReadyRemit.CallForActionButtonStyle
+  public var borderlessButtonStyle: ReadyRemitSDK.ReadyRemit.BorderlessButtonStyle
+  public var inputStyle: ReadyRemitSDK.ReadyRemit.InputStyle
+  public var dropdownListStyle: ReadyRemitSDK.ReadyRemit.InputSelectionListStyle
+  public var searchbarStyle: ReadyRemitSDK.ReadyRemit.SearchbarStyle
+  public var inputLabelFont: ReadyRemitSDK.ReadyRemit.FontSpec? {
+    get
+    set
+  }
+  public var textfieldSubtitleFont: ReadyRemitSDK.ReadyRemit.FontSpec? {
+    get
+    set
+  }
+  public var textfieldSubheadlineFont: ReadyRemitSDK.ReadyRemit.FontSpec? {
+    get
+    set
+  }
+  public var textfieldInfoIcon: UIKit.UIImage?
+  public var textfieldInfoIconColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var textfieldErrorColor: UIKit.UIColor {
+    get
+    set
+  }
+  @objc public var primaryButtonColor: UIKit.UIColor
+  @objc public var titleColor: UIKit.UIColor
+  @objc public var titleFont: UIKit.UIFont
+  @objc public var pageTitleFont: UIKit.UIFont
+  @objc public var fieldTitleFont: UIKit.UIFont
+  @objc public var fieldValueFont: UIKit.UIFont
+  @objc public var fieldBorderColor: UIKit.UIColor
+  @objc public var dividerColor: UIKit.UIColor
+  @objc public var removeColor: UIKit.UIColor
+  @objc public var buttonColor: UIKit.UIColor
+  @objc public var disabledColor: UIKit.UIColor
+  @objc public var disabledFont: UIKit.UIFont
+  @objc public var highlightedBackgroundColor: UIKit.UIColor
+  @objc public var highlightedCapsuleFont: UIKit.UIFont
+  @objc public var disabledCapsuleFont: UIKit.UIFont
+  @objc public var currencyDisableColor: UIKit.UIColor
+  @objc public var currencyDisableFont: UIKit.UIFont
+  @objc public var transferMoneyColor: UIKit.UIColor
+  @objc public var transferMoneyFont: UIKit.UIFont
+  @objc public var navigationFont: UIKit.UIFont
+  @objc public var navigationCancelFont: UIKit.UIFont
+  @objc public var navigationColor: UIKit.UIColor
+  @objc public var navigationCancelColor: UIKit.UIColor
+  @objc public var backgroundColor: UIKit.UIColor
+  @objc public var modalTitleFont: UIKit.UIFont
+  @objc public var modalTransparentColor: UIKit.UIColor
+  @objc public var noteFont: UIKit.UIFont
+  @objc deinit
+}
+extension ReadyRemitSDK.ReadyRemitApiEnvironment : Swift.Equatable {}
+extension ReadyRemitSDK.ReadyRemitApiEnvironment : Swift.Hashable {}
+extension ReadyRemitSDK.ReadyRemitApiEnvironment : Swift.RawRepresentable {}
