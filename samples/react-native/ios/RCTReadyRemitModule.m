@@ -14,7 +14,7 @@
 
 - (NSArray<NSString *> *)supportedEvents
 {
-  return @[@"READYREMIT_AUTH_TOKEN_REQUESTED", @"READYREMIT_TRANSFER_SUBMITTED"];
+  return @[@"READYREMIT_AUTH_TOKEN_REQUESTED", @"READYREMIT_TRANSFER_SUBMITTED", @"SDK_CLOSED"];
 }
 
 // Ripped from https://stackoverflow.com/a/12397366
@@ -133,6 +133,10 @@ RCT_EXPORT_METHOD(launch: (NSString *)environment :(NSString *)language :(NSDict
   _transferSuccessCallback = [success copy];
   _transferFailCallback = [failure copy];
   [self sendEventWithName:@"READYREMIT_TRANSFER_SUBMITTED" body:[transferRequest toJSON]];
+}
+
+- (void) onSDKClose {
+     [self sendEventWithName:@"SDK_CLOSED" body:@{ }];
 }
 
 @end
