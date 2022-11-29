@@ -39,7 +39,7 @@ const App = () => {
   useEffect(() => {
     eventEmitter.addListener("READYREMIT_AUTH_TOKEN_REQUESTED", () => {
       // TODO: Fetch an auth token from your server
-      ReadyRemitModule.setAuthToken("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImlyUmg0cHJQSGxfdm5KSm15dVdrcyJ9.eyJodHRwczovL2FwaS5yZWFkeXJlbWl0LmNvbS9zZW5kZXJfaWQiOiJmMjY2ZDAzNi02OTVjLTQ2ODYtOTU4Yi01MTBjOGU1MGY4ZjAiLCJpc3MiOiJodHRwczovL3JlYWR5cmVtaXQudXMuYXV0aDAuY29tLyIsInN1YiI6InltWnlHc0xtQ21oejdHTVNRUTVPS1VWeFlydHVIZm90QGNsaWVudHMiLCJhdWQiOiJodHRwczovL3NhbmRib3gtYXBpLnJlYWR5cmVtaXQuY29tIiwiaWF0IjoxNjY5NzM1MDMwLCJleHAiOjE2Njk4MjE0MzAsImF6cCI6InltWnlHc0xtQ21oejdHTVNRUTVPS1VWeFlydHVIZm90IiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.bKaxz9Xj3MxulfrHeFj74nedYDQ0gt2_GH3CcWRBSeskpBssOclw_MdQsthxK1Mg2zshqdAu-OK6UyICCXXVDSvrcugoM8ycYFnnP1VAGOwexIyGRNs08uQgif4Tp6k8EqUJ9tN2pbqUKOVF_uAKqg4Rn1XYB9anNnBCFMrlvDCY-z3OUri_yGi3jU8t2SneBjHi4VVgrCrEo9K8XKmG9Wrch2fFJxfl4IxafYkZhTWTp5XPf4B4SWW7ts6OH-_U-9NT-BzRQpjhTwHltcK8g95cYud9CNlRxeQMkJvvEiDKr9hYJTDoldAVTdGMfCcgisGLu90jEKHUQQHKIdqUhg", null);
+      ReadyRemitModule.setAuthToken("", null);
     })
   
     return function cleanup () {
