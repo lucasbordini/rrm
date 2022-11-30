@@ -13,6 +13,7 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
     private val REQUEST_CODE = 10
     private val READYREMIT_AUTH_TOKEN_REQUESTED = "READYREMIT_AUTH_TOKEN_REQUESTED"
     private val READYREMIT_TRANSFER_SUBMITTED = "READYREMIT_TRANSFER_SUBMITTED"
+    private val READYREMIT_SDK_CLOSED = "READYREMIT_SDK_CLOSED"
     private lateinit var _onAuthCallback: ReadyRemitAuthCallback
     private lateinit var _onTransferCallback: ReadyRemitTransferCallback
     private var waitForTransfer : Job? = null
@@ -28,12 +29,22 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
                 .useEnvironment(if(environment == "PRODUCTION") Environment.PRODUCTION else Environment.SANDBOX)
                 .useAuthProvider { callback -> requestReadyRemitAccessToken(callback) }
                 .useTransferSubmitProvider  { request, callback -> submitReadyRemitTransfer(request, callback) }
-                .useDefaultTheme(R.style.Base_Theme_ReadyRemit_Light)
+                .useDefaultTheme(R.style.Theme_Custom)
                 .useLanguage(language)
                 .build()
         )
 
-        ReadyRemit.remitFrom(currentActivity!!, REQUEST_CODE, R.style.Base_Theme_ReadyRemit_Light, language)
+        ReadyRemit.remitFrom(currentActivity!!, REQUEST_CODE, R.style.Theme_Custom, language)
+
+        ReadyRemit.setEventListener { event ->
+            when (event) {
+                SDKClosed -> {
+                    reactApplicationContext
+                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter::class.java)
+                        .emit(READYREMIT_SDK_CLOSED, null)
+                }
+            }
+        }
     }
 
     @ReactMethod
