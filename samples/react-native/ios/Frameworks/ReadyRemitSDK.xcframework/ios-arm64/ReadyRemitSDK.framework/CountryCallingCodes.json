@@ -322,7 +322,17 @@
   {
     "name": "Dominican Republic",
     "iso3Code": "DOM",
-    "callingCode": "1-809,1-829,1-849"
+    "callingCode": "1-809"
+  },
+  {
+    "name": "Dominican Republic",
+    "iso3Code": "DOM",
+    "callingCode": "1-829"
+  },
+  {
+    "name": "Dominican Republic",
+    "iso3Code": "DOM",
+    "callingCode": "1-849"
   },
   {
     "name": "Ecuador",
@@ -892,7 +902,12 @@
   {
     "name": "Puerto Rico",
     "iso3Code": "PRI",
-    "callingCode": "1"
+    "callingCode": "1-787"
+  },
+  {
+    "name": "Puerto Rico",
+    "iso3Code": "PRI",
+    "callingCode": "1-939"
   },
   {
     "name": "Qatar",

@@ -4,7 +4,6 @@
 //
 //  Created by Lucas Bordini Ribeiro de Araujo on 28/11/22.
 //
-
 #import "RCTReadyRemitModule.h"
 #import "AppDelegate.h"
 #import "ReadyRemitViewController.h"
@@ -59,7 +58,7 @@ RCT_EXPORT_METHOD(launch: (NSString *)environment :(NSString *)language :(NSDict
     ReadyRemitViewController *readyRemitViewController = [[ReadyRemitViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:readyRemitViewController];
 
-    FontSpec.defaultFamily = [styles valueForKeyPath:@"fonts.default.family"];
+    ReadyRemitFontScheme.defaultFamily = [styles valueForKeyPath:@"fonts.default.family"];
 
     ReadyRemitColorScheme *color = [[ReadyRemitColorScheme alloc] init];
     
@@ -92,9 +91,9 @@ RCT_EXPORT_METHOD(launch: (NSString *)environment :(NSString *)language :(NSDict
     }
     
     if ([environment isEqual:@"PRODUCTION"]) {
-      readyRemitViewController.environment = ReadyRemitApiEnvironmentProduction;
+      readyRemitViewController.environment = ReadyRemitEnvironmentProduction;
     } else {
-      readyRemitViewController.environment = ReadyRemitApiEnvironmentSandbox;
+      readyRemitViewController.environment = ReadyRemitEnvironmentSandbox;
     }
     
     ReadyRemitAppearance *appearance = [[ReadyRemitAppearance alloc] initWithColors: color];

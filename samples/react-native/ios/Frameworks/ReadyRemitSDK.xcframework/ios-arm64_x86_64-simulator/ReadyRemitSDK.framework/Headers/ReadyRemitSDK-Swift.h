@@ -256,22 +256,20 @@ using UInt = size_t;
 
 
 
-enum ReadyRemitApiEnvironment : NSInteger;
 @class ReadyRemitAppearance;
-@class NSString;
+enum ReadyRemitEnvironment : NSInteger;
 @class UINavigationController;
 @protocol ReadyRemitDelegate;
+@class NSString;
 
 SWIFT_CLASS("_TtC13ReadyRemitSDK10ReadyRemit")
 @interface ReadyRemit : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ReadyRemit * _Nonnull shared;)
 + (ReadyRemit * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic) enum ReadyRemitApiEnvironment environment;
 @property (nonatomic, strong) ReadyRemitAppearance * _Nonnull appearance;
-@property (nonatomic, readonly, copy) NSString * _Nonnull info;
-- (void)languageSelected:(NSString * _Nonnull)lang;
-- (void)switchFeatureFlags:(NSString * _Nonnull)flag :(BOOL)status;
+@property (nonatomic) enum ReadyRemitEnvironment environment;
 - (void)launchObjcInNavigation:(UINavigationController * _Nonnull)inNavigation delegate:(id <ReadyRemitDelegate> _Nonnull)delegate onLaunch:(void (^ _Nullable)(void))onLaunch onDismiss:(void (^ _Nullable)(void))onDismiss;
+- (void)languageSelected:(NSString * _Nonnull)lang;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -295,7 +293,8 @@ SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit15TransferRequest")
 @property (nonatomic, readonly, copy) NSString * _Nonnull purposeOfRemittance;
 @property (nonatomic, readonly, copy) NSArray<RequestField *> * _Nullable fields;
 @property (nonatomic, readonly, copy) NSString * _Nullable quoteHistoryId;
-- (nonnull instancetype)initWithDstCountryIso3Code:(NSString * _Nonnull)dstCountryIso3Code dstCurrencyIso3Code:(NSString * _Nonnull)dstCurrencyIso3Code srcCurrencyIso3Code:(NSString * _Nonnull)srcCurrencyIso3Code transferMethod:(NSString * _Nonnull)transferMethod quoteBy:(NSString * _Nonnull)quoteBy amount:(NSInteger)amount fee:(NSInteger)fee recipientId:(NSString * _Nonnull)recipientId recipientAccountId:(NSString * _Nullable)recipientAccountId purposeOfRemittance:(NSString * _Nonnull)purposeOfRemittance fields:(NSArray<RequestField *> * _Nullable)fields quoteHistoryId:(NSString * _Nonnull)quoteHistoryId OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nullable sourceOfFunds;
+- (nonnull instancetype)initWithDstCountryIso3Code:(NSString * _Nonnull)dstCountryIso3Code dstCurrencyIso3Code:(NSString * _Nonnull)dstCurrencyIso3Code srcCurrencyIso3Code:(NSString * _Nonnull)srcCurrencyIso3Code transferMethod:(NSString * _Nonnull)transferMethod quoteBy:(NSString * _Nonnull)quoteBy amount:(NSInteger)amount fee:(NSInteger)fee recipientId:(NSString * _Nonnull)recipientId recipientAccountId:(NSString * _Nullable)recipientAccountId purposeOfRemittance:(NSString * _Nonnull)purposeOfRemittance fields:(NSArray<RequestField *> * _Nullable)fields quoteHistoryId:(NSString * _Nonnull)quoteHistoryId sourceOfFunds:(NSString * _Nullable)sourceOfFunds OBJC_DESIGNATED_INITIALIZER;
 - (NSString * _Nullable)toJSON SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -314,94 +313,41 @@ SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit12RequestField")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-@interface ReadyRemit (SWIFT_EXTENSION(ReadyRemitSDK))
-@end
-
-
-SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit8FontSpec")
-@interface FontSpec : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable defaultFamily;)
-+ (NSString * _Nullable)defaultFamily SWIFT_WARN_UNUSED_RESULT;
-+ (void)setDefaultFamily:(NSString * _Nullable)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL dynamicFontsize;)
-+ (BOOL)dynamicFontsize SWIFT_WARN_UNUSED_RESULT;
-+ (void)setDynamicFontsize:(BOOL)value;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-typedef SWIFT_ENUM(NSInteger, ReadyRemitApiEnvironment, open) {
-  ReadyRemitApiEnvironmentProduction = 0,
-  ReadyRemitApiEnvironmentSandbox = 1,
-  ReadyRemitApiEnvironmentUat = 2,
-};
-
 @class ReadyRemitColorScheme;
-@class ReadyRemitFonts;
-@class UIColor;
-@class UIFont;
+@class NSDictionary;
 
 SWIFT_CLASS("_TtC13ReadyRemitSDK20ReadyRemitAppearance")
 @interface ReadyRemitAppearance : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ReadyRemitAppearance * _Nonnull shared;)
 + (ReadyRemitAppearance * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) ReadyRemitColorScheme * _Nonnull colors;
-@property (nonatomic, strong) ReadyRemitFonts * _Nonnull fonts;
-- (nonnull instancetype)initWithFonts:(ReadyRemitFonts * _Nonnull)fonts colors:(ReadyRemitColorScheme * _Nonnull)colors OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFonts:(ReadyRemitFonts * _Nonnull)fonts OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithColors:(ReadyRemitColorScheme * _Nonnull)colors OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStyles:(NSDictionary * _Nonnull)styles OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) UIColor * _Nonnull primaryButtonColor;
-@property (nonatomic, strong) UIColor * _Nonnull titleColor;
-@property (nonatomic, strong) UIFont * _Nonnull titleFont;
-@property (nonatomic, strong) UIFont * _Nonnull pageTitleFont;
-@property (nonatomic, strong) UIFont * _Nonnull fieldTitleFont;
-@property (nonatomic, strong) UIFont * _Nonnull fieldValueFont;
-@property (nonatomic, strong) UIColor * _Nonnull fieldBorderColor;
-@property (nonatomic, strong) UIColor * _Nonnull dividerColor;
-@property (nonatomic, strong) UIColor * _Nonnull removeColor;
-@property (nonatomic, strong) UIColor * _Nonnull buttonColor;
-@property (nonatomic, strong) UIColor * _Nonnull disabledColor;
-@property (nonatomic, strong) UIFont * _Nonnull disabledFont;
-@property (nonatomic, strong) UIColor * _Nonnull highlightedBackgroundColor;
-@property (nonatomic, strong) UIFont * _Nonnull highlightedCapsuleFont;
-@property (nonatomic, strong) UIFont * _Nonnull disabledCapsuleFont;
-@property (nonatomic, strong) UIColor * _Nonnull currencyDisableColor;
-@property (nonatomic, strong) UIFont * _Nonnull currencyDisableFont;
-@property (nonatomic, strong) UIColor * _Nonnull transferMoneyColor;
-@property (nonatomic, strong) UIFont * _Nonnull transferMoneyFont;
-@property (nonatomic, strong) UIFont * _Nonnull navigationFont;
-@property (nonatomic, strong) UIFont * _Nonnull navigationCancelFont;
-@property (nonatomic, strong) UIColor * _Nonnull navigationColor;
-@property (nonatomic, strong) UIColor * _Nonnull navigationCancelColor;
-@property (nonatomic, strong) UIColor * _Nonnull backgroundColor;
-@property (nonatomic, strong) UIFont * _Nonnull modalTitleFont;
-@property (nonatomic, strong) UIColor * _Nonnull modalTransparentColor;
-@property (nonatomic, strong) UIFont * _Nonnull noteFont;
 @end
 
+@class UIColor;
 
 SWIFT_CLASS("_TtC13ReadyRemitSDK21ReadyRemitColorScheme")
 @interface ReadyRemitColorScheme : NSObject
 @property (nonatomic, strong) UIColor * _Nonnull primaryShade1;
-@property (nonatomic, strong) UIColor * _Nonnull primaryShade2;
 @property (nonatomic, strong) UIColor * _Nonnull secondaryShade1;
-@property (nonatomic, strong) UIColor * _Nonnull secondaryShade2;
-@property (nonatomic, strong) UIColor * _Nonnull secondaryShade3;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade1;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade2;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade3;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade4;
-@property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade5;
 @property (nonatomic, strong) UIColor * _Nonnull backgroundColorPrimary;
 @property (nonatomic, strong) UIColor * _Nonnull backgroundColorSecondary;
-@property (nonatomic, strong) UIColor * _Nonnull backgroundColorTertiary;
-@property (nonatomic, strong) UIColor * _Nonnull error;
 @property (nonatomic, strong) UIColor * _Nonnull success;
+@property (nonatomic, strong) UIColor * _Nonnull error;
 @property (nonatomic, strong) UIColor * _Nonnull controlShade1;
-@property (nonatomic, strong) UIColor * _Nonnull controlShade2;
 @property (nonatomic, strong) UIColor * _Nonnull controlAccessoryShade1;
+@property (nonatomic, strong) UIColor * _Nonnull primaryShade2;
+@property (nonatomic, strong) UIColor * _Nonnull secondaryShade2;
+@property (nonatomic, strong) UIColor * _Nonnull secondaryShade3;
+@property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade5;
+@property (nonatomic, strong) UIColor * _Nonnull backgroundColorTertiary;
+@property (nonatomic, strong) UIColor * _Nonnull controlShade2;
 @property (nonatomic, strong) UIColor * _Nonnull controlAccessoryShade2;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryDisabled;
 @property (nonatomic, strong) UIColor * _Nonnull textTertiaryDisabled;
@@ -418,10 +364,22 @@ SWIFT_PROTOCOL("_TtP13ReadyRemitSDK18ReadyRemitDelegate_")
 - (void)onSDKClose;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ReadyRemitEnvironment, open) {
+  ReadyRemitEnvironmentProduction = 0,
+  ReadyRemitEnvironmentSandbox = 1,
+};
 
-SWIFT_CLASS("_TtC13ReadyRemitSDK15ReadyRemitFonts")
-@interface ReadyRemitFonts : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+
+SWIFT_CLASS("_TtC13ReadyRemitSDK20ReadyRemitFontScheme")
+@interface ReadyRemitFontScheme : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull defaultFamily;)
++ (NSString * _Nonnull)defaultFamily SWIFT_WARN_UNUSED_RESULT;
++ (void)setDefaultFamily:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL dynamicFontsize;)
++ (BOOL)dynamicFontsize SWIFT_WARN_UNUSED_RESULT;
++ (void)setDynamicFontsize:(BOOL)value;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -707,22 +665,20 @@ using UInt = size_t;
 
 
 
-enum ReadyRemitApiEnvironment : NSInteger;
 @class ReadyRemitAppearance;
-@class NSString;
+enum ReadyRemitEnvironment : NSInteger;
 @class UINavigationController;
 @protocol ReadyRemitDelegate;
+@class NSString;
 
 SWIFT_CLASS("_TtC13ReadyRemitSDK10ReadyRemit")
 @interface ReadyRemit : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ReadyRemit * _Nonnull shared;)
 + (ReadyRemit * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic) enum ReadyRemitApiEnvironment environment;
 @property (nonatomic, strong) ReadyRemitAppearance * _Nonnull appearance;
-@property (nonatomic, readonly, copy) NSString * _Nonnull info;
-- (void)languageSelected:(NSString * _Nonnull)lang;
-- (void)switchFeatureFlags:(NSString * _Nonnull)flag :(BOOL)status;
+@property (nonatomic) enum ReadyRemitEnvironment environment;
 - (void)launchObjcInNavigation:(UINavigationController * _Nonnull)inNavigation delegate:(id <ReadyRemitDelegate> _Nonnull)delegate onLaunch:(void (^ _Nullable)(void))onLaunch onDismiss:(void (^ _Nullable)(void))onDismiss;
+- (void)languageSelected:(NSString * _Nonnull)lang;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -746,7 +702,8 @@ SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit15TransferRequest")
 @property (nonatomic, readonly, copy) NSString * _Nonnull purposeOfRemittance;
 @property (nonatomic, readonly, copy) NSArray<RequestField *> * _Nullable fields;
 @property (nonatomic, readonly, copy) NSString * _Nullable quoteHistoryId;
-- (nonnull instancetype)initWithDstCountryIso3Code:(NSString * _Nonnull)dstCountryIso3Code dstCurrencyIso3Code:(NSString * _Nonnull)dstCurrencyIso3Code srcCurrencyIso3Code:(NSString * _Nonnull)srcCurrencyIso3Code transferMethod:(NSString * _Nonnull)transferMethod quoteBy:(NSString * _Nonnull)quoteBy amount:(NSInteger)amount fee:(NSInteger)fee recipientId:(NSString * _Nonnull)recipientId recipientAccountId:(NSString * _Nullable)recipientAccountId purposeOfRemittance:(NSString * _Nonnull)purposeOfRemittance fields:(NSArray<RequestField *> * _Nullable)fields quoteHistoryId:(NSString * _Nonnull)quoteHistoryId OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nullable sourceOfFunds;
+- (nonnull instancetype)initWithDstCountryIso3Code:(NSString * _Nonnull)dstCountryIso3Code dstCurrencyIso3Code:(NSString * _Nonnull)dstCurrencyIso3Code srcCurrencyIso3Code:(NSString * _Nonnull)srcCurrencyIso3Code transferMethod:(NSString * _Nonnull)transferMethod quoteBy:(NSString * _Nonnull)quoteBy amount:(NSInteger)amount fee:(NSInteger)fee recipientId:(NSString * _Nonnull)recipientId recipientAccountId:(NSString * _Nullable)recipientAccountId purposeOfRemittance:(NSString * _Nonnull)purposeOfRemittance fields:(NSArray<RequestField *> * _Nullable)fields quoteHistoryId:(NSString * _Nonnull)quoteHistoryId sourceOfFunds:(NSString * _Nullable)sourceOfFunds OBJC_DESIGNATED_INITIALIZER;
 - (NSString * _Nullable)toJSON SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -765,94 +722,41 @@ SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit12RequestField")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-@interface ReadyRemit (SWIFT_EXTENSION(ReadyRemitSDK))
-@end
-
-
-SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit8FontSpec")
-@interface FontSpec : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable defaultFamily;)
-+ (NSString * _Nullable)defaultFamily SWIFT_WARN_UNUSED_RESULT;
-+ (void)setDefaultFamily:(NSString * _Nullable)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL dynamicFontsize;)
-+ (BOOL)dynamicFontsize SWIFT_WARN_UNUSED_RESULT;
-+ (void)setDynamicFontsize:(BOOL)value;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-typedef SWIFT_ENUM(NSInteger, ReadyRemitApiEnvironment, open) {
-  ReadyRemitApiEnvironmentProduction = 0,
-  ReadyRemitApiEnvironmentSandbox = 1,
-  ReadyRemitApiEnvironmentUat = 2,
-};
-
 @class ReadyRemitColorScheme;
-@class ReadyRemitFonts;
-@class UIColor;
-@class UIFont;
+@class NSDictionary;
 
 SWIFT_CLASS("_TtC13ReadyRemitSDK20ReadyRemitAppearance")
 @interface ReadyRemitAppearance : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ReadyRemitAppearance * _Nonnull shared;)
 + (ReadyRemitAppearance * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) ReadyRemitColorScheme * _Nonnull colors;
-@property (nonatomic, strong) ReadyRemitFonts * _Nonnull fonts;
-- (nonnull instancetype)initWithFonts:(ReadyRemitFonts * _Nonnull)fonts colors:(ReadyRemitColorScheme * _Nonnull)colors OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFonts:(ReadyRemitFonts * _Nonnull)fonts OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithColors:(ReadyRemitColorScheme * _Nonnull)colors OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStyles:(NSDictionary * _Nonnull)styles OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) UIColor * _Nonnull primaryButtonColor;
-@property (nonatomic, strong) UIColor * _Nonnull titleColor;
-@property (nonatomic, strong) UIFont * _Nonnull titleFont;
-@property (nonatomic, strong) UIFont * _Nonnull pageTitleFont;
-@property (nonatomic, strong) UIFont * _Nonnull fieldTitleFont;
-@property (nonatomic, strong) UIFont * _Nonnull fieldValueFont;
-@property (nonatomic, strong) UIColor * _Nonnull fieldBorderColor;
-@property (nonatomic, strong) UIColor * _Nonnull dividerColor;
-@property (nonatomic, strong) UIColor * _Nonnull removeColor;
-@property (nonatomic, strong) UIColor * _Nonnull buttonColor;
-@property (nonatomic, strong) UIColor * _Nonnull disabledColor;
-@property (nonatomic, strong) UIFont * _Nonnull disabledFont;
-@property (nonatomic, strong) UIColor * _Nonnull highlightedBackgroundColor;
-@property (nonatomic, strong) UIFont * _Nonnull highlightedCapsuleFont;
-@property (nonatomic, strong) UIFont * _Nonnull disabledCapsuleFont;
-@property (nonatomic, strong) UIColor * _Nonnull currencyDisableColor;
-@property (nonatomic, strong) UIFont * _Nonnull currencyDisableFont;
-@property (nonatomic, strong) UIColor * _Nonnull transferMoneyColor;
-@property (nonatomic, strong) UIFont * _Nonnull transferMoneyFont;
-@property (nonatomic, strong) UIFont * _Nonnull navigationFont;
-@property (nonatomic, strong) UIFont * _Nonnull navigationCancelFont;
-@property (nonatomic, strong) UIColor * _Nonnull navigationColor;
-@property (nonatomic, strong) UIColor * _Nonnull navigationCancelColor;
-@property (nonatomic, strong) UIColor * _Nonnull backgroundColor;
-@property (nonatomic, strong) UIFont * _Nonnull modalTitleFont;
-@property (nonatomic, strong) UIColor * _Nonnull modalTransparentColor;
-@property (nonatomic, strong) UIFont * _Nonnull noteFont;
 @end
 
+@class UIColor;
 
 SWIFT_CLASS("_TtC13ReadyRemitSDK21ReadyRemitColorScheme")
 @interface ReadyRemitColorScheme : NSObject
 @property (nonatomic, strong) UIColor * _Nonnull primaryShade1;
-@property (nonatomic, strong) UIColor * _Nonnull primaryShade2;
 @property (nonatomic, strong) UIColor * _Nonnull secondaryShade1;
-@property (nonatomic, strong) UIColor * _Nonnull secondaryShade2;
-@property (nonatomic, strong) UIColor * _Nonnull secondaryShade3;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade1;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade2;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade3;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade4;
-@property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade5;
 @property (nonatomic, strong) UIColor * _Nonnull backgroundColorPrimary;
 @property (nonatomic, strong) UIColor * _Nonnull backgroundColorSecondary;
-@property (nonatomic, strong) UIColor * _Nonnull backgroundColorTertiary;
-@property (nonatomic, strong) UIColor * _Nonnull error;
 @property (nonatomic, strong) UIColor * _Nonnull success;
+@property (nonatomic, strong) UIColor * _Nonnull error;
 @property (nonatomic, strong) UIColor * _Nonnull controlShade1;
-@property (nonatomic, strong) UIColor * _Nonnull controlShade2;
 @property (nonatomic, strong) UIColor * _Nonnull controlAccessoryShade1;
+@property (nonatomic, strong) UIColor * _Nonnull primaryShade2;
+@property (nonatomic, strong) UIColor * _Nonnull secondaryShade2;
+@property (nonatomic, strong) UIColor * _Nonnull secondaryShade3;
+@property (nonatomic, strong) UIColor * _Nonnull textPrimaryShade5;
+@property (nonatomic, strong) UIColor * _Nonnull backgroundColorTertiary;
+@property (nonatomic, strong) UIColor * _Nonnull controlShade2;
 @property (nonatomic, strong) UIColor * _Nonnull controlAccessoryShade2;
 @property (nonatomic, strong) UIColor * _Nonnull textPrimaryDisabled;
 @property (nonatomic, strong) UIColor * _Nonnull textTertiaryDisabled;
@@ -869,10 +773,22 @@ SWIFT_PROTOCOL("_TtP13ReadyRemitSDK18ReadyRemitDelegate_")
 - (void)onSDKClose;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ReadyRemitEnvironment, open) {
+  ReadyRemitEnvironmentProduction = 0,
+  ReadyRemitEnvironmentSandbox = 1,
+};
 
-SWIFT_CLASS("_TtC13ReadyRemitSDK15ReadyRemitFonts")
-@interface ReadyRemitFonts : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+
+SWIFT_CLASS("_TtC13ReadyRemitSDK20ReadyRemitFontScheme")
+@interface ReadyRemitFontScheme : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull defaultFamily;)
++ (NSString * _Nonnull)defaultFamily SWIFT_WARN_UNUSED_RESULT;
++ (void)setDefaultFamily:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL dynamicFontsize;)
++ (BOOL)dynamicFontsize SWIFT_WARN_UNUSED_RESULT;
++ (void)setDynamicFontsize:(BOOL)value;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

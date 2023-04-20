@@ -6,139 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		iNLnVbkUuow0ncszYK8Bvxs8VqU=
+		b6vya3v/ytG0LIym86OxyTbAwmY=
 		</data>
 		<key>CountriesAndConcurrencies.json</key>
 		<data>
 		AObgQgQLLU/+8yFg+tBklc90lLc=
 		</data>
-		<key>CountriesCurrencies.json</key>
-		<data>
-		rsqKMRWx8ziTdt5ItFJ9O0HWj3g=
-		</data>
 		<key>CountryCallingCodes.json</key>
 		<data>
-		8xTjMTzJhurGLMix9rUV6sh7i1c=
-		</data>
-		<key>CountryListResponse.json</key>
-		<data>
-		Z5pyp/EnjDM/Iv7u5fQAlOHDJp0=
-		</data>
-		<key>ErrorAuth_401.json</key>
-		<data>
-		8TEIHedVl5zSCvB3vSd50azLgQI=
-		</data>
-		<key>ErrorAuth_403.json</key>
-		<data>
-		TYwnEuFYOX3zTSd9kABV+cYKQ8I=
-		</data>
-		<key>ErrorGeneric.json</key>
-		<data>
-		I46FReqg/PmssEQt3TxQnYXiY7g=
-		</data>
-		<key>ErrorServer.json</key>
-		<data>
-		E8EWwziFLNVysseC02p/bf91XeM=
-		</data>
-		<key>Frameworks/AcuantCamera.framework/AcuantCamera</key>
-		<data>
-		XKx+P2+qo9IyGPCxYSY17U7nfnw=
-		</data>
-		<key>Frameworks/AcuantCamera.framework/Assets.car</key>
-		<data>
-		IqCGVBU1Hts3bV/BHFQZZvsLtBw=
-		</data>
-		<key>Frameworks/AcuantCamera.framework/Info.plist</key>
-		<data>
-		7rTsctOODKLdwchLCrph21Imc3U=
-		</data>
-		<key>Frameworks/AcuantCamera.framework/_CodeSignature/CodeResources</key>
-		<data>
-		Siz4xRMuvHuhvQScQW1Iu0fjB/A=
-		</data>
-		<key>Frameworks/AcuantCommon.framework/AcuantCommon</key>
-		<data>
-		ds/9pHnUNsoSMGaOBBNxhEmJQWs=
-		</data>
-		<key>Frameworks/AcuantCommon.framework/Info.plist</key>
-		<data>
-		QE3+RMj3b2q2qGlBPO6+o9sgcyE=
-		</data>
-		<key>Frameworks/AcuantCommon.framework/_CodeSignature/CodeResources</key>
-		<data>
-		Dd1cYhQQjI2QrWQraBOiC3fzZG4=
-		</data>
-		<key>Frameworks/AcuantFaceCapture.framework/AcuantFaceCapture</key>
-		<data>
-		1YvxnYiEAwjOHhvwT+9fAqdwE18=
-		</data>
-		<key>Frameworks/AcuantFaceCapture.framework/Info.plist</key>
-		<data>
-		NtFpvjqwS3nWqQ1mRJcZnYlGaxA=
-		</data>
-		<key>Frameworks/AcuantFaceCapture.framework/_CodeSignature/CodeResources</key>
-		<data>
-		6YNBqfdQmJTHvOBajSR8OQRYCAU=
-		</data>
-		<key>Frameworks/AcuantImagePreparation.framework/AcuantImagePreparation</key>
-		<data>
-		RfHl36puBgz9v3zw8/wmX0EQqC8=
-		</data>
-		<key>Frameworks/AcuantImagePreparation.framework/Info.plist</key>
-		<data>
-		1QxVcba3lKaf+WSfCbD5hRnSzS0=
-		</data>
-		<key>Frameworks/AcuantImagePreparation.framework/LICENSE.rst</key>
-		<data>
-		plcbgZwvspDiuxgukqeiDX1CMY0=
-		</data>
-		<key>Frameworks/AcuantImagePreparation.framework/_CodeSignature/CodeResources</key>
-		<data>
-		nTOI6BLKzGdiRckKkMh11MvIZeg=
-		</data>
-		<key>Frameworks/AcuantImagePreparation.framework/miss_test.csv</key>
-		<data>
-		oMa/qev8oYq981JMTunsn+EhgtU=
-		</data>
-		<key>Frameworks/AcuantPassiveLiveness.framework/AcuantPassiveLiveness</key>
-		<data>
-		3WNHMMi36EY+TzQjpjKV5nYs+jY=
-		</data>
-		<key>Frameworks/AcuantPassiveLiveness.framework/Info.plist</key>
-		<data>
-		NFliCw2azO5HFA55KYKlry9xYrs=
-		</data>
-		<key>Frameworks/AcuantPassiveLiveness.framework/_CodeSignature/CodeResources</key>
-		<data>
-		NaYulJ9/o2M3dby+sLaCrHuMeLo=
-		</data>
-		<key>Frameworks/ScanForensicsPlus.framework/Info.plist</key>
-		<data>
-		J5VwA8pu7f4M5DQCK1pHml94+d0=
-		</data>
-		<key>Frameworks/ScanForensicsPlus.framework/ScanForensicsPlus</key>
-		<data>
-		+DwOQ16VzkQpGvmTj6aN21BuRyI=
-		</data>
-		<key>Frameworks/ScanForensicsPlus.framework/_CodeSignature/CodeResources</key>
-		<data>
-		gG7eQVBd2mIzVFGcZl8RAb4n5ZI=
-		</data>
-		<key>Frameworks/TesseractOCR.framework/Info.plist</key>
-		<data>
-		uukfSxog36MIBfvOK/cupftco2Y=
-		</data>
-		<key>Frameworks/TesseractOCR.framework/TesseractOCR</key>
-		<data>
-		A+hFySavPKAyAOsQoUu6eCPrXUM=
-		</data>
-		<key>Frameworks/TesseractOCR.framework/_CodeSignature/CodeResources</key>
-		<data>
-		StngefJlN7OhQfKQhSDZJSqpDRY=
+		VeoKXsksAlT3d2hVoDtpCF+d9uI=
 		</data>
 		<key>Headers/ReadyRemitSDK-Swift.h</key>
 		<data>
-		klunXOrZWNCPPCHudJtJmn8TVqw=
+		/JSbYQNrcxro6QGNqUSxG+6LtRM=
 		</data>
 		<key>Headers/ReadyRemitSDK.h</key>
 		<data>
@@ -146,15 +26,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ie+7p2BTkH16u4djVC+Fbvmi62c=
+		IyULZ6EhdMNpqavtF393gVWkCEc=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		XoACGc7PuskznWmtD5joTmmvjN0=
+		ITpC+wSpGh+YDGCXuYG26BI7IeY=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		4Z2d5kHzSU1w3oxfJKP7s50pPPk=
+		GCjirWMrWemZiik39o6XEfbB+H8=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -162,19 +42,19 @@
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		4Z2d5kHzSU1w3oxfJKP7s50pPPk=
+		GCjirWMrWemZiik39o6XEfbB+H8=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		n++i8LFX8EhwO+HjVP7unZfUKAM=
+		2FkTU4dwYiTk49hSd3X1Ne628iA=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		XoACGc7PuskznWmtD5joTmmvjN0=
+		ITpC+wSpGh+YDGCXuYG26BI7IeY=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Z/w9oW102wwYeMMgYmhADXpUHh4=
+		ciNCNRr08aKEMkPpLwadR/7wi0I=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -182,50 +62,33 @@
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Z/w9oW102wwYeMMgYmhADXpUHh4=
+		ciNCNRr08aKEMkPpLwadR/7wi0I=
 		</data>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SGj+AgNQiFtrY58VkJD/zvuMvFM=
+		QUM9W72XpufrdVf7kCvQ49zZfUU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		VXBPieKaf1NXcgTIrKrPT9ckfII=
 		</data>
-		<key>Quotes.json</key>
+		<key>SF-Pro-Text-Bold.otf</key>
 		<data>
-		MSLamVCsTh1xKpRzu7lR/riHn9o=
+		McHPwcgbW/97aOClA2qC720DKp8=
 		</data>
-		<key>Rate.json</key>
+		<key>SF-Pro-Text-Regular.otf</key>
 		<data>
-		8PMnehtDUwu9S9vj7eZbdlhrkTQ=
+		nBTqkRqUvLAXnLiEsHr/uI3kmoQ=
 		</data>
-		<key>RecipientResponse.json</key>
+		<key>SF-Pro-Text-Semibold.otf</key>
 		<data>
-		9i12zc4Xq+1EnLMBiI8ahrOugaI=
+		ZPt9//6b2Y5PXMOzRrDUxRfdb94=
 		</data>
-		<key>Transfer.json</key>
-		<data>
-		zEzWkok9rLbi2DYPGwrHCNwy4K0=
-		</data>
-		<key>User.json</key>
-		<data>
-		5UgQJCl98aZA/NrbkfgUNhD8iT4=
-		</data>
-		<key>de.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7zrFniABq8zHFXyjy1FrTZ2lYDI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2xRBuikfOncqPA8C8aOl62sVY3I=
+			YqTsE4k84ElNiunp0613yAnl/70=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -234,7 +97,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KOPx9mytQdH+j4Rtb0t0sHwi+gE=
+			EiLWucjuUNtJhy0ixE02wP8hXSM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -246,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U9GeNyAnqmIxNo0F1x5ZSBA79QMu5jygCT5kCfYWC6s=
+			f+reH2IUTA41BVv3cEngDEaRe7B9T3OwDtIKV5Q0rGE=
 			</data>
 		</dict>
 		<key>CountriesAndConcurrencies.json</key>
@@ -256,228 +119,18 @@
 			O5J52HaSiLJc/jQxH/Y1hsHWzoEsPmH/T1+t1cqKGw8=
 			</data>
 		</dict>
-		<key>CountriesCurrencies.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jAcHu8Q9qIO1s4fIxcluGxnezpc6sTf+gJHVhMnQqkw=
-			</data>
-		</dict>
 		<key>CountryCallingCodes.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9DdMd2uTqdZHZUYCpvKfkqu8w7WRRPR8Qgwqh2H/r0s=
-			</data>
-		</dict>
-		<key>CountryListResponse.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aZFGLcx/sCLROzkWLH4cETJCT34uGGUxHdt5xND52Po=
-			</data>
-		</dict>
-		<key>ErrorAuth_401.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			L1ARzoiV8FvkCdQL9wOZI6ZopRBGSrq3OjH8uao62fs=
-			</data>
-		</dict>
-		<key>ErrorAuth_403.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			SLGL5quBEZBlJPF8ihgl7ZJp/VnkA+yA+TdL9rQ4xME=
-			</data>
-		</dict>
-		<key>ErrorGeneric.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			I0iHrxnXXHYRKqVkMZMK5jaxSOGsNk1xIaQhjv7dhSM=
-			</data>
-		</dict>
-		<key>ErrorServer.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KB4wUxethjPGZC5w7RT952NLqMmdVR2lzzc7qJhpVko=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCamera.framework/AcuantCamera</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3V4WeMrBGUkTJos1spzIsKGDolkOCxmeHNw7KadhIIM=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCamera.framework/Assets.car</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			In9HQ0mSB9vKJC2uzAtsrWpgbOUnDTcSz7dIgM2nvQc=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCamera.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JUyzDjW+321QmRNfguJi6lYCEVRpCQcUOGQ9d3w3Xn4=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCamera.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			R5yK7Ue1e6hUBkG5Z7X3A2lhg5cbNNM8AVmujFEzWtY=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCommon.framework/AcuantCommon</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zGacyK8EtItPqG1roMrqpX/OLMHgqm0cfQ69KPpeeo0=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCommon.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LKm/uLbuSdhzh0/3S3PrMTanHA9zswAiLNWPBMX6ORA=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantCommon.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VcbaB8vdRTNsNF71ipckvSstrHFYBsOyTd/14wkm7zM=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantFaceCapture.framework/AcuantFaceCapture</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CUFH9fPvIa1biMtyJ3Vp9L4DyHlM/Gkx7M4pqyPfPDU=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantFaceCapture.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			icqOYCdDTNbybyOxzaRD++TDXB6/GXcr+tGz5pVjheo=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantFaceCapture.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OvSw9NbdXzlUgb9KAtmi85gLr5h9aT3ai2RWXXn5jpU=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantImagePreparation.framework/AcuantImagePreparation</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			glvw+364w1hfwbS90gXjOWJB8nb7ZZBVU2osYJstEWw=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantImagePreparation.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			j8zLQsBp5E/OSHGRmHBQOG1T8/Fqz8Zewm6tiuWYJhg=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantImagePreparation.framework/LICENSE.rst</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			glyTJOcPjIOci6kQVD3Up9ruJDuG75YFlMETgaGZgLg=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantImagePreparation.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iubi7qPKzkTmv/XhHR+8GOe4+1Qsl4jM7xwjLGcnvRA=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantImagePreparation.framework/miss_test.csv</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			t7fvXfiu/QDlpMo9niK+vH7TcA/aLLRlwummf561L98=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantPassiveLiveness.framework/AcuantPassiveLiveness</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XRyDQsXevR9kIZl7oqc0euv2fy/A1kxvdZlGt160dak=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantPassiveLiveness.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jetcBEksRicZh69+OmS83WqD7QeNyr8g+9DyxInOSL8=
-			</data>
-		</dict>
-		<key>Frameworks/AcuantPassiveLiveness.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KtG6DgcseVbL5xGJKNJPWjL4I/HVK4tIUuM3r8wLjyM=
-			</data>
-		</dict>
-		<key>Frameworks/ScanForensicsPlus.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zSXKTilp8WBH/7d1nuu+D/AsE6wi4aDSAJxrEfwEW2A=
-			</data>
-		</dict>
-		<key>Frameworks/ScanForensicsPlus.framework/ScanForensicsPlus</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tKvs+iJYIR9cPvQ1mkLQHg9N73XrbCzjxrjADol9NV0=
-			</data>
-		</dict>
-		<key>Frameworks/ScanForensicsPlus.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HgQoXxrF/jlDmagSU+fNHDVj4PU8x/psvJ6ICGuvrt4=
-			</data>
-		</dict>
-		<key>Frameworks/TesseractOCR.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			isXJxj+j1Jhmqdd0VxCPCKHtKRb8CSkmt3I5dMcL8y4=
-			</data>
-		</dict>
-		<key>Frameworks/TesseractOCR.framework/TesseractOCR</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CqXiFjzC0uGnTC70Lavl9ni3gKJHDTE5n6Dmfz708VA=
-			</data>
-		</dict>
-		<key>Frameworks/TesseractOCR.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YicLJ5ojuXVJ3AUOt1HWKKouthcEgO7QeurC1Uo352s=
+			3E+IsV7qHBqljPlRlxuXrTrAu58nKdQe5BqZRGpTDtQ=
 			</data>
 		</dict>
 		<key>Headers/ReadyRemitSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			viiLCcgjnCSOL6GKKj9UI2/Sk/YByxEZrcM5FUniQi4=
+			JIsspFyd1I7bNtZNGqnrhZAvsQuGJrVOuoxLe/fG3qA=
 			</data>
 		</dict>
 		<key>Headers/ReadyRemitSDK.h</key>
@@ -491,14 +144,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			48O3mOqWJ0eEw8f9NL5znhTJ7vNDdzrrOIwZVqFoz8s=
+			i8lc6R0bdwbJi3s6E3EcS8UnsT8FDOLHtFo8xBy+fqk=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5VuF6qkgJF8h8h4/OBkeCsxyENNq1wLxwVshkQjdpPI=
+			9AwZ7CwKFmaVO2PcjVeJZ2Tu1XXSDKbMBfnS6vqiqwk=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -512,28 +165,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5VuF6qkgJF8h8h4/OBkeCsxyENNq1wLxwVshkQjdpPI=
+			9AwZ7CwKFmaVO2PcjVeJZ2Tu1XXSDKbMBfnS6vqiqwk=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xf8V0G0XK+ifT5Cdd8uiMBbGI1/wk3HRdoIUyCjjxBk=
+			FQL3REeV7l9VnTcZCGqVwoogTFQqY9PvJ4hN6abxl4w=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			48O3mOqWJ0eEw8f9NL5znhTJ7vNDdzrrOIwZVqFoz8s=
+			i8lc6R0bdwbJi3s6E3EcS8UnsT8FDOLHtFo8xBy+fqk=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QqyM/iuBjyAvuOmqC0xcWkWQ6Y75ITKHQPpOqrR20eg=
+			GsozuWsNs7l4MVutsYcVWyFcxhy9Jhy9id8vHrsToDQ=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -547,14 +200,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QqyM/iuBjyAvuOmqC0xcWkWQ6Y75ITKHQPpOqrR20eg=
+			GsozuWsNs7l4MVutsYcVWyFcxhy9Jhy9id8vHrsToDQ=
 			</data>
 		</dict>
 		<key>Modules/ReadyRemitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TOqF0GEb/dKW0oeGrbNwE9EbM/R2gaP5GvGwr0zGOR4=
+			UGoR68OYO7BZTH3TkZGVDjMucnby2KqKiqik8A6OXlQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -564,55 +217,32 @@
 			K5GkRX3Q5PWr+/E3zU2mpvIhwgc/dmBUP4aqn9giuNE=
 			</data>
 		</dict>
-		<key>Quotes.json</key>
+		<key>SF-Pro-Text-Bold.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z+YddQvFoSfQvJa0lfney8HsB40Zc1V42MNJs3g35ng=
+			EbC+0SwWIVuBg5q6oILgldtr3TWp5kUkQB8+f8d1nlI=
 			</data>
 		</dict>
-		<key>Rate.json</key>
+		<key>SF-Pro-Text-Regular.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IiAADjoePeVrBGA3Nuc1IJhOfDCy1pL5v+RSwkaD4QM=
+			YJycLGDAQWF49E1EhMhxWtHkIG/FqaigEQHbf98Rg0U=
 			</data>
 		</dict>
-		<key>RecipientResponse.json</key>
+		<key>SF-Pro-Text-Semibold.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jtMgKlnTyRxhGmWxt9/MvI3YxKCzVlu8t4uPVLpwVQs=
+			Ei/6wUtiwfeKuiC5D8qhdESp6/w0R4f3II2eyhT/0LQ=
 			</data>
-		</dict>
-		<key>Transfer.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gOucn3nphI5E/Smds1Fr56lFCluSajAKinpLFVlntz8=
-			</data>
-		</dict>
-		<key>User.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			uwszVXUVQUojZ/VBWqe3MUBVY5swbM6ZPElSEXR2uuY=
-			</data>
-		</dict>
-		<key>de.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bNWU2paT5V4xHbxqO1CggUbDgP4kWv8VLfs8jLmbPVw=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YzDm/G+Mt1KsvdKPXgYGUldDqSAFf7ySk+fjzqvXeuE=
+			2DtGGMHGkdHJx5U8X9JwJJDUo+zX7rTCNhTOaxKvecM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -621,7 +251,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0rK5SE7grpWybOCp0hbgjFqD2L64X+ybd9l55ut9TYE=
+			tLyUnJ1grzL7NCxq3geFqFu7XGqXxnLO2JiRgAijnw0=
 			</data>
 			<key>optional</key>
 			<true/>
