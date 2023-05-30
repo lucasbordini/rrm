@@ -1,19 +1,19 @@
 Pod::Spec.new do |spec|
   spec.name         = "ReadyRemitSDK"
   spec.version      = "5.0"
-  spec.summary      = "A short description of ReadyRemitSDK."
+  spec.summary      = "The latest version of ReadyRemitSDK. A Brightwell SDK"
 
-  spec.description  = "A short description of ReadyRemitSDK."
+  spec.description  = "A short description of ReadyRemitSDK. bbebebbebebebebebbebebebebebbebebe"
   spec.homepage     = "https://developer.readyremit.com/"
 
-  s.license         = {
+  spec.license         = {
           :type => 'commercial',
           :text => <<-LICENSE
-                  Copyright 2023 Acuant, Inc. All Rights Reserved.
+                  Copyright 2023 Brightwell, Inc. All Rights Reserved.
                   LICENSE
     }
 
-  spec.author       = { "Brightwell" }
+  spec.author       = "Brightwell"
 
   spec.source       = { :git => "https://github.com/BrightwellPayments/readyremit-sdk-ios.git", :tag => "#{spec.version}" }
 
