@@ -14,7 +14,6 @@ Pod::Spec.new do |spec|
     spec.source       = { :http => 'https://github.com/lucasbordini/rrm/raw/main/Sources/ReadyRemitFrameworks.zip' }
     spec.ios.deployment_target = '14.0'
     spec.swift_version = '5.0'
-    spec.vendored_frameworks =ReadyRemitSDK.xcframework', 'AcuantCamera.xcframework', 'AcuantCommon.xcframework', 'AcuantFaceCapture.xcframework', 'AcuantImagePreparation.xcframework', 'AcuantPassiveLiveness.xcframework', 'ScanForensicsPlus.xcframework', 'TesseractOCR.xcframework', 'VisaSensoryBranding.xcframework'
-]
+    spec.vendored_frameworks = 'ReadyRemitSDK.xcframework', 'VisaSensoryBranding.xcframework'
 
 end
