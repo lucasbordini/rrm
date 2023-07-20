@@ -15,8 +15,9 @@ Pod::Spec.new do |spec|
 
     spec.author       = { "Brightwell" => "lucas.bordini@hotmail.com" }
 
-    spec.source       = { :git => "https://github.com/lucasbordini/teste.git", :tag => 'v2' }
+    spec.source       = { :git => "https://github.com/lucasbordini/teste.git", :tag => 'v3' }
     
+    spec.platform = :ios, '14.0'
     spec.ios.deployment_target = '14.0'
 
     spec.swift_version = '5.0'
@@ -25,15 +26,16 @@ Pod::Spec.new do |spec|
     
     spec.source_files = 'Sources/**/*.{swift,h,m,c,cpp}'
     
-    spec.vendored_frameworks = 'Sources/*.xcframework'
-    
-    spec.dependency 'AcuantCamera.xcframework'
-    spec.dependency 'AcuantCommon.xcframework'
-    spec.dependency 'AcuantFaceCapture.xcframework'
-    spec.dependency 'AcuantImagePreparation.xcframework'
-    spec.dependency 'AcuantPassiveLiveness.xcframework'
-    spec.dependency 'ScanForensicsPlus.xcframework'
-    spec.dependency 'TesseractOCR.xcframework'
-    spec.source_files = 'Sources/*'
+    spec.vendored_frameworks = [
+  'Sources/ReadyRemitSDK.xcframework',
+  'Sources/AcuantCamera.xcframework',
+  'Sources/AcuantCommon.xcframework',
+  'Sources/AcuantFaceCapture.xcframework',
+  'Sources/AcuantImagePreparation.xcframework',
+  'Sources/AcuantPassiveLiveness.xcframework',
+  'Sources/ScanForensicsPlus.xcframework',
+  'Sources/TesseractOCR.xcframework',
+  'Sources/VisaSensoryBranding.xcframework'
+]
 
 end
