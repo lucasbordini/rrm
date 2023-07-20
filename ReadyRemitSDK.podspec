@@ -23,6 +23,10 @@ Pod::Spec.new do |spec|
     
     spec.frameworks = 'UIKit', 'Foundation'
     
+    spec.source_files = 'Sources/**/*.{swift,h,m,c,cpp}'
+    
+    spec.vendored_frameworks = 'Sources/*.xcframework'
+    
     spec.dependency 'AcuantCamera.xcframework'
     spec.dependency 'AcuantCommon.xcframework'
     spec.dependency 'AcuantFaceCapture.xcframework'
