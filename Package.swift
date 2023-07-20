@@ -12,49 +12,49 @@ let package = Package(
     dependencies: [
         .binaryTarget(
             name: "AcuantCamera",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/AcuantCamera.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/AcuantCamera.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "AcuantCommon",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/AcuantCommon.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/AcuantCommon.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "AcuantFaceCapture",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/AcuantFaceCapture.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/AcuantFaceCapture.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "AcuantImagePreparation",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/AcuantImagePreparation.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/AcuantImagePreparation.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "AcuantPassiveLiveness",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/AcuantPassiveLiveness.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/AcuantPassiveLiveness.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "ScanForensicsPlus",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/ScanForensicsPlus.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/ScanForensicsPlus.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "TesseractOCR",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/TesseractOCR.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/TesseractOCR.xcframework.zip",
             from: "1.0.0"
         ),
         .binaryTarget(
             name: "VisaSensoryBranding",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/VisaSensoryBranding.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/VisaSensoryBranding.xcframework.zip",
             from: "1.0.0"
         ),
     ],
     targets: [
         .binaryTarget(
             name: "ReadyRemitSDK",
-            url: "https://github.com/lucasbordini/teste/blob/main/Sources/ReadyRemitSDK.xcframework.zip",
+            url: "https://github.com/lucasbordini/teste/raw/main/Sources/ReadyRemitSDK.xcframework.zip",
             from: "1.0.0"
         ),
     ]
