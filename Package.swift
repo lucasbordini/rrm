@@ -10,7 +10,7 @@ let package = Package(
         ),
         .library(
             name: "ReadyRemitSDKLite",
-            targets: ["ReadyRemitSDK", "VisaSensoryBranding"]
+            targets: ["ReadyRemitSDKLite", "VisaSensoryBranding"]
         )
     ],
     dependencies: [
@@ -19,6 +19,11 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ReadyRemitSDK",
+            url: "https://github.com/lucasbordini/rrm/raw/main/Sources/ReadyRemitSDK.xcframework.zip",
+            checksum: "b2ac3a9c0b2a1dff9b34059a255adb4271068628ab7e664a2d1cb8c79d63b63e"
+        ),
+        .binaryTarget(
+            name: "ReadyRemitSDKLite",
             url: "https://github.com/lucasbordini/rrm/raw/main/Sources/ReadyRemitSDK.xcframework.zip",
             checksum: "b2ac3a9c0b2a1dff9b34059a255adb4271068628ab7e664a2d1cb8c79d63b63e"
         ),
