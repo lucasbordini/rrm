@@ -1,13 +1,17 @@
 // swift-tools-version:5.5
 import PackageDescription
 
-let ReadyRemitSDKPackage = Package(
+let package = Package(
     name: "ReadyRemitSDKPackage",
     products: [
         .library(
             name: "ReadyRemitSDK",
             targets: ["ReadyRemitSDK", "AcuantCamera", "AcuantCommon", "AcuantFaceCapture", "AcuantImagePreparation", "AcuantPassiveLiveness", "ScanForensicsPlus", "TesseractOCR", "VisaSensoryBranding"]
         ),
+        .library(
+            name: "ReadyRemitSDKLite",
+            targets: ["ReadyRemitSDK", "VisaSensoryBranding"]
+        )
     ],
     dependencies: [
         
@@ -52,31 +56,6 @@ let ReadyRemitSDKPackage = Package(
             name: "TesseractOCR",
             url: "https://github.com/lucasbordini/rrm/raw/main/Sources/TesseractOCR.xcframework.zip",
             checksum: "49d75e826a1346924bc9bbb579470382399e525e610ac5eece78fb63e1883f3f"
-        ),
-        .binaryTarget(
-            name: "VisaSensoryBranding",
-            url: "https://github.com/lucasbordini/rrm/raw/main/Sources/VisaSensoryBranding.xcframework.zip",
-            checksum: "056ee1189d6a3b26c33973eae2328a13ad1e6f2511223dc6f6863f17fb8d953a"
-        )
-    ]
-)
-
-let ReadyRemitSDKLitePackage = Package(
-    name: "ReadyRemitSDKLitePackage",
-    products: [
-        .library(
-            name: "ReadyRemitSDK",
-            targets: ["ReadyRemitSDK", "VisaSensoryBranding"]
-        ),
-    ],
-    dependencies: [
-        
-    ],
-    targets: [
-        .binaryTarget(
-            name: "ReadyRemitSDK",
-            url: "https://github.com/lucasbordini/rrm/raw/main/Sources/ReadyRemitSDK.xcframework.zip",
-            checksum: "b2ac3a9c0b2a1dff9b34059a255adb4271068628ab7e664a2d1cb8c79d63b63e"
         ),
         .binaryTarget(
             name: "VisaSensoryBranding",
